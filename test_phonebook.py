@@ -20,6 +20,5 @@ class PhoneBookTest(unittest.TestCase):
         with self.assertRaises(KeyError):
             self.phonebook.lookup("MissingName")
 
-    @unittest.skip("WIP")
     def test_empty_phonebook_is_consistent(self):
         self.assertTrue(self.phonebook.is_consistent())
