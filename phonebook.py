@@ -17,3 +17,6 @@ class PhoneBook:
                 if number1.startswith(number2):
                     return False
         return True
+
+    def names(self):
+        return set(self.numbers.keys())
