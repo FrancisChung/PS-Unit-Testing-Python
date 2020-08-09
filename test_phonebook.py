@@ -37,3 +37,8 @@ class PhoneBookTest(unittest.TestCase):
         self.phonebook.add("Bob", "12345")
         self.phonebook.add("Sue", "123")
         self.assertFalse(self.phonebook.is_consistent())
+
+    def test_phonebook_contains_all_names(self):
+        self.phonebook.add("Bob", "1234")
+        assert self.phonebook.names() == {"Bob", "Missing"}
+
