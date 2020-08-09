@@ -1,5 +1,5 @@
 import unittest
-
+import pytest
 from phonebook import PhoneBook
 
 
@@ -42,4 +42,7 @@ class PhoneBookTest(unittest.TestCase):
         self.phonebook.add("Bob", "1234")
         assert "Bob" in  self.phonebook.names()
 
+    def test_missing_name_raises_error(self):
+        with pytest.raises(KeyError):
+            self.phonebook.lookup("Bob")
 
