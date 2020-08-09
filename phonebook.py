@@ -3,9 +3,9 @@ import os
 
 class PhoneBook:
 
-    def __init__(self):
+    def __init__(self, cache_directory):
         self.numbers = {}
-        self.filename = "phonebook.txt"
+        self.filename = os.path.join(cache_directory, "phonebook.txt")
         self.cache = open(self.filename, "w")
 
     def add(self, name, number):
