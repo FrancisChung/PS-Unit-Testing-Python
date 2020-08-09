@@ -3,6 +3,7 @@ from phonebook import PhoneBook
 
 @pytest.fixture()
 def phonebook(tmpdir):
+    "Provides an empty phonebook"
     return PhoneBook(tmpdir)
 
 def test_lookup_by_name(phonebook):
