@@ -4,13 +4,10 @@ def small_straight(dice):
     15
     >>> small_straight([1,2,3,5,5])
     0
-
-    It doesn't handle sets, or unsorted lists
-
     >>> small_straight({1,2,3,4,5})
-    0
+    15
     >>> small_straight([1,2,3,5,4])
-    0
+    15
     """
     if sorted(dice) == [1, 2, 3, 4, 5]:
         return sum(dice)
