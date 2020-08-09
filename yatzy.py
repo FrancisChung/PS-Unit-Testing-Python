@@ -12,6 +12,6 @@ def small_straight(dice):
     >>> small_straight([1,2,3,5,4])
     0
     """
-    if dice == [1, 2, 3, 4, 5]:
+    if sorted(dice) == [1, 2, 3, 4, 5]:
         return sum(dice)
     return 0
