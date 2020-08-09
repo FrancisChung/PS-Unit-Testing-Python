@@ -3,9 +3,7 @@ from phonebook import PhoneBook
 
 @pytest.fixture()
 def phonebook(tmpdir):
-    phonebook = PhoneBook(tmpdir)
-    yield phonebook
-    phonebook.clear()
+    return PhoneBook(tmpdir)
 
 def test_lookup_by_name(phonebook):
     phonebook.add("Bob", "1234")
